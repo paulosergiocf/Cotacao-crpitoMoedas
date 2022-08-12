@@ -2,3 +2,5 @@
 startVenvLinux.sh
 .ipynb_checkpoints
 apiKey.key
+.ipynb_checkpoints
+__pychache__
