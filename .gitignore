@@ -6,3 +6,11 @@ apiKey.key
 __pychache__
 rascunhos-jvsc-395524ab-4b95-4ae6-9716-3b7cc7813416cb2c53ea-6b70-45da-a3ba-7a500de4e4f2.ipynb
 project.docx
+core/coin/__pycache__/admin.cpython-310.pyc
+core/coin/__pycache__/criptoCompare.cpython-310.pyc
+core/coin/__pycache__/models.cpython-310.pyc
+core/coin/__pycache__/views.cpython-310.pyc
+core/coin/criptoCompare.py
+core/coin/migrations/__pycache__/0001_initial.cpython-310.pyc
+core/core/__pycache__/settings.cpython-310.pyc
+teste.py
