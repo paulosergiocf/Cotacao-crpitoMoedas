@@ -15,13 +15,30 @@
         
         <div class="dashboard">
             <h2>Dashboard</h2>
-            <ul>
-                <li><a href="">BitCoin: $</a></li>
-                <li><a href="">Etherium: $</a></li>
-                <li><a href="">Binance: $</a></li>
-                <li><a href="">XPR(Ripple): $</a></li>
-            </ul>
-        </div>
+            <table border="1">
+                <!-- <caption><b>Painel de cotação de Criptomoedas</b></caption> -->
+                <tr>
+                    <th>Moeda</th>
+                    <th>Valor(R$)</th>
+                </tr>
+            
+                <tr>
+                    <td>{{ k }}</td>
+                    <td>R$ {{ v.BRL }}</td>
+                </tr>
+                <tr>
+                    <td>{{ k }}</td>
+                    <td>R$ {{ v.BRL }}</td>
+                </tr>
+                <tr>
+                    <td>{{ k }}</td>
+                    <td>R$ {{ v.BRL }}</td>
+                </tr>
+            
+            </table>
+            <div class="botao-update">
+                <a>Atualizar</a>
+            </div>
         <div class="grafico">
             <h2>Grafico Semanal</h2>
 

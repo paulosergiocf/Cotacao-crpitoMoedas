@@ -1,20 +1,20 @@
+/* ----Reset Css ----*/
 * {
     margin: 0px;
     border: 0px;
     padding: 0px;
 }
-
+/* ----corpo da Pagina ----*/
 body {
     background: #252525;
     margin-left: auto;
     margin-right: auto;
 }
-
+/* ----cabeçalho ----*/
 header{
     height: 100px;
     text-align: center;
 }
-
 header h1 {
     margin: 30px;
     color: #f2f2f2;
@@ -23,7 +23,7 @@ header h1 {
 main h2 {
     color: coral;
 }
-
+/* ----Área do dashboard ----*/
 .dashboard {
     padding: 10%;
     text-align: center;
@@ -31,25 +31,39 @@ main h2 {
 
 }
 
-.dashboard li {
-    display: inline-block;
+.dashboard a {
+    padding: 1em 5em 1em 5em;
+    margin-top: 20px;
+    text-decoration: none;
+    background: coral;
+    border: 0.5px salmon;
     border-radius: 5%;
-    padding: 5%;
-    border: 0.2px solid coral;
-    background: #7e7d7d;
-    width: 15%;
-    margin: 2%;
+}
+/*-----------tabela---------*/
+table {
+    margin-top: 5%;
+    color: darkorange;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.dashboard a {
-    text-decoration: none;
+table td {
+    padding: 1em 5em 1em 5em;
+    border: solid 1px #404040;
+    background: #f5f5f5;
+}
+
+table td:hover {
+
+    background: #ffc670;
+}
+
+.botao-update {
+    padding: 30px;
 }
 .grafico{
     padding: 10%;
     text-align: center;
-
-
-
 }
 
 footer {
