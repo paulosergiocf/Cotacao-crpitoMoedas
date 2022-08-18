@@ -3,7 +3,6 @@ class AcessoApi:
     def __init__(self, path):
         self.__key = ''
         self.__path = path
-        
         self.importKey()
         
     @property

@@ -20,7 +20,7 @@ class BancoDeDados:
             c.close()
     
         except Exception as erro:
-            print(F'!BANCO DE DADOS: {erro}')
+            raise erro
             
     def insertDados(self, coin: str, valor: float):
         try:
