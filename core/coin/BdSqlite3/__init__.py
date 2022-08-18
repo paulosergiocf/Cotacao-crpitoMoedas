@@ -32,3 +32,14 @@ class BancoDeDados:
 
         except Exception as erro:
             raise erro
+    
+    def insertDadoRetroativo(self, coin: str, valor: float, data):
+        try:
+            c = self.conexao.cursor()
+            c.execute('INSERT INTO coin_cotacoes (coin, valor, dataCoin) VALUES (?, ?, ?)', (coin, valor, data))
+            self.conexao.commit()
+            c.close()
+
+
+        except Exception as erro:
+            raise erro

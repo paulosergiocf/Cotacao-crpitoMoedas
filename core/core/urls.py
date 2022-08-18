@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from coin.views import index
+from coin.views import index, update
 
 urlpatterns = [
     path('', index, name='index'),
+    path('', update, name='update'),
     path('admin/', admin.site.urls),
 ]

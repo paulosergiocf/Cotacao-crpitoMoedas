@@ -4,43 +4,41 @@
  
 
 <main>
-        <header>
-            <h1>Comparação de CriptoMoedas</h1>
-        </header>
-        
-        <div class="dashboard">
-            <h2>Dashboard</h2>
-            <table border="1">
+    <header>
+        <h1>Comparação de CriptoMoedas</h1>
+        <nav class="menu">
+            <a href="#dashboard">DashBoard</a>
+            <a href="#grafico">Grafico</a>
+        </nav>
+    </header>
+    <section id="dashboard">
+        <img src="https://cdn-icons-png.flaticon.com/512/894/894124.png" height=100>
+        <h2>Dashboard</h2>
+        <table border="1">
+            <tr>
+                <th>Moeda</th>
+                <th>Valor(R$)</th>
+            </tr>
+            {% for dado in cotacoes %}
+                {% for k, v in dado.items %}
                 <tr>
-                    <th>Moeda</th>
-                    <th>Valor(R$)</th>
+                    <td>{{ k }}</td>
+                    <td>R$ {{ v.BRL }}</td>
                 </tr>
-       
-                {% for dado in cotacoes %}
-               
-                    {% for k, v in dado.items %}
-                    <tr>
-                        <td>{{ k }}</td>
-                        <td>R$ {{ v.BRL }}</td>
-                    </tr>
 
-                    {% endfor %}
                 {% endfor %}
-            
-                
-            </table>
-        <div class="botao-update">
-            <a>Atualizar</a>
-        </div>       
-            
-        </div>
-        <div class="grafico">
-            <h2>Grafico Semanal</h2>
-
-        </div>
-
-    </main>
-
+            {% endfor %}
+        
+        </table>
+    <div class="botao-update">
+        <a href="{% url 'update' %}">Atualizar</a>
+    </div>       
+        
+    </section>
+    <section id="grafico">
+        <h2>Grafico Semanal</h2>
+    </section>
+</main>
 
 {% include 'partials/footer.html' %}
 {% endblock %}

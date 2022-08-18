@@ -7,8 +7,3 @@ class CriptoCompare():
     def cotarPorMoeda(self, fsym, tsyms):
         requestHttp = requests.get(f"https://min-api.cryptocompare.com/data/price?fsym={fsym}&tsyms={tsyms}&api_key={self.keyApi}").json()
         return requestHttp
-
-    def cotarGeral(self, tsyms):
-        # criar forma de pesquisar geral
-        pass
-        # return requests.get(f"https://min-api.cryptocompare.com/data/price?fsym={fsym}&tsyms={tsyms}&api_key={self.keyApi}")

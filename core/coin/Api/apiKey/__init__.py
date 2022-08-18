@@ -15,6 +15,7 @@ class AcessoApi:
             fileKey = open(self.__path)
             self.__key = fileKey.readline()
             fileKey.close()
+            
         except Exception as erro:
             raise erro
 

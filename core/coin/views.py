@@ -1,15 +1,21 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Cotacoes
-
 from coin.Api.criptoCompareApi import CriptoCompare
 from coin.Api.apiKey import AcessoApi
+from coin.BdSqlite3 import BancoDeDados
+
 # Create your views here.
 api = AcessoApi('apiKey.key')
 cc = CriptoCompare(api.key)
- 
+sqlite = BancoDeDados()
+
+def update():
+    # sqlite.insertDados("BitCoin",25.0)
+    index
+
 def index(request):
-   
+    #sqlite.insertDados()
     dados = {
         "cotacoes": 
             [

@@ -11,27 +11,60 @@ body {
     margin-right: auto;
 }
 /* ----cabeçalho ----*/
-header{
-    height: 100px;
-    text-align: center;
-}
+
 header h1 {
-    margin: 30px;
+    font-size: 16pt;
+    margin: 1em;
     color: #f2f2f2;
 }
 
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    background: #181818;
+}
+
+/* Menu */
+.menu {
+    height: 50px;
+    display: block;
+}
+
+.menu a {
+    padding: 0.5rem;
+    border: solid #353535 1px;
+    text-decoration: none;
+    color: #f2f2f2;
+    background: #181818;
+    border-radius: 10%;
+    margin-left: .2em;
+}
+
+.menu a:hover {
+    background: #252525;
+}
 main h2 {
     color: coral;
 }
+section {
+    margin-top: 2em;
+    width: 100%;
+    min-height: 80vh;
+    padding-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* ----Área do dashboard ----*/
-.dashboard {
-    padding: 10%;
+#dashboard {
+    padding-top: 10%;
     text-align: center;
     background: #353535;
 
 }
 
-.dashboard a {
+#dashboard a {
     padding: 1em 5em 1em 5em;
     margin-top: 20px;
     text-decoration: none;
@@ -54,16 +87,16 @@ table td {
 }
 
 table td:hover {
-
     background: #ffc670;
 }
 
 .botao-update {
     padding: 30px;
 }
-.grafico{
-    padding: 10%;
+#grafico{
+    padding-top: 10%;
     text-align: center;
+    background: #f2f2f2;
 }
 
 footer {
