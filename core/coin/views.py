@@ -5,17 +5,23 @@ from coin.Api.criptoCompareApi import CriptoCompare
 from coin.Api.apiKey import AcessoApi
 from coin.BdSqlite3 import BancoDeDados
 
+
 # Create your views here.
 api = AcessoApi('apiKey.key')
 cc = CriptoCompare(api.key)
 sqlite = BancoDeDados()
 
 def update():
-    # sqlite.insertDados("BitCoin",25.0)
-    index
+    # usr = Cotacoes(coin="Bitcoin", valor=cc.cotarPorMoeda("BTC", "BRL")["BRL"]) # 
+    # usr.save()
+    cotacoes = Cotacoes.objects.all()
+    dados = {
+    'cotacoes': cotacoes
+    }
+
 
 def index(request):
-    #sqlite.insertDados()
+    
     dados = {
         "cotacoes": 
             [
@@ -39,7 +45,6 @@ def index(request):
                     "VET":cc.cotarPorMoeda("VET", "BRL"),
                     "FIL":cc.cotarPorMoeda("FIL", "BRL"),
                     "ATOM":cc.cotarPorMoeda("ATOM", "BRL")
-                
                 }
                 ],
     }

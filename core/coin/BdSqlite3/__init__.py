@@ -4,7 +4,7 @@ from datetime import datetime
 
 class BancoDeDados:
     def __init__(self):
-        self.conexao = sqlite3.connect(r'core/db1.sqlite3')
+        self.conexao = sqlite3.connect(r'core/db.sqlite3')
         self.criarTabela()
     
     def criarTabela(self):
@@ -14,7 +14,7 @@ class BancoDeDados:
                         id integer primary key autoincrement,
                         coin varchar(200),
                         valor real,
-                        dataCoin datetime)""")
+                        dateCoin datetime)""")
 
             self.conexao.commit()
             c.close()
@@ -25,7 +25,7 @@ class BancoDeDados:
     def insertDados(self, coin: str, valor: float):
         try:
             c = self.conexao.cursor()
-            c.execute('INSERT INTO coin_cotacoes (coin, valor, dataCoin) VALUES (?, ?, ?)', (coin, valor, datetime.now()))
+            c.execute('INSERT INTO coin_cotacoes (coin, valor, dateCoin) VALUES (?, ?, ?)', (coin, valor, datetime.now()))
             self.conexao.commit()
             c.close()
 
@@ -36,10 +36,22 @@ class BancoDeDados:
     def insertDadoRetroativo(self, coin: str, valor: float, data):
         try:
             c = self.conexao.cursor()
-            c.execute('INSERT INTO coin_cotacoes (coin, valor, dataCoin) VALUES (?, ?, ?)', (coin, valor, data))
+            c.execute('INSERT INTO coin_cotacoes (coin, valor, dateCoin) VALUES (?, ?, ?)', (coin, valor, data))
             self.conexao.commit()
             c.close()
 
+
+        except Exception as erro:
+            raise erro
+    def buscardados(self):
+        
+        try:
+            c = self.conexao.cursor()
+            c.execute("SELECT * from coin_cotacoes")
+            data = c.fetchall()
+            self.conexao.commit()
+            c.close()
+            return data
 
         except Exception as erro:
             raise erro
