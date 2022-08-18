@@ -10,12 +10,16 @@ class Grafico:
         plt.legend()
         plt.xlabel('dia')
         plt.ylabel('Valor (R$)')
-        plt.show()
+        plt.savefig(f"{nome}.jpg") 
         
     def separarMoedas(self, moeda):
         lista = []
         listaValor = []
         listaData = []
+        
+        lista.clear()
+        listaValor.clear()
+        listaData.clear()
         
         for dado in self.dados:
             if dado[1] == moeda:
